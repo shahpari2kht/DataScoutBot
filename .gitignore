@@ -1,0 +1,7 @@
+# 🛡️ Sensitive and cache files
+.env
+*.csv
+__pycache__/
+latest_scrape.txt
+.idea/
+.vscode/

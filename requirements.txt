@@ -1,0 +1,6 @@
+aiogram>=3.2.0
+requests
+beautifulsoup4
+streamlit
+python-dotenv
+pandas
