@@ -1,7 +1,31 @@
-# 🛡️ Sensitive and cache files
-.env
-*.csv
+# Python
 __pycache__/
-latest_scrape.txt
-.idea/
+*.py[cod]
+*.so
+*.pyd
+*.pyi
+
+# Virtual environments
+venv/
+.venv/
+
+# IDEs
 .vscode/
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# dotenv
+.env
+.env.* 
+
+# Streamlit
+.streamlit/
