@@ -1,94 +1,101 @@
 # DataScoutBot
 
-## توضیح کوتاه و فنی از هدف پروژه
-پروژه‌ی **DataScoutBot** یک ربات هوشمند مبتنی بر زبان Python است که جهت جمع‌آوری، تحلیل و بارگذاری داده‌ها از منابع مختلف طراحی شده است. این ربات قابلیت پردازش خودکار داده، نظارت بر داده‌های دریافتی و ارائه‌ی نتایج تجزیه و تحلیل را داراست و به سادگی می‌تواند در پروژه‌های پردازش داده یا یادگیری ماشین ادغام شود.
+![Build Status](https://img.shields.io/github/actions/workflow/status/shahpari2kht/DataScoutBot/python-app.yml?branch=main)
+![Version](https://img.shields.io/github/v/release/shahpari2kht/DataScoutBot)
+![License](https://img.shields.io/github/license/shahpari2kht/DataScoutBot)
+![Code Coverage](https://img.shields.io/codecov/c/github/shahpari2kht/DataScoutBot)
 
-## پیش‌نیازها
-- **Python 3.8 یا بالاتر**
-- pip (مدیر بسته‌های پایتون)
-- دسترسی به اینترنت (برای دریافت داده از منابع خارجی)
+---
 
-## نحوه‌ی نصب و اجرا
+## Project Overview
 
-```sh
-# کلون کردن مخزن
+**DataScoutBot** is an intelligent Python-based bot designed to collect, process, and analyze data from multiple sources. The bot automates data extraction, monitors incoming data streams, and provides structured analysis results.  
+
+It can be integrated into data processing pipelines, machine learning projects, or any automation workflow requiring data aggregation and insights.
+
+---
+
+## Features
+
+- Automatic data collection from files, APIs, or web sources  
+- Real time data monitoring and error handling  
+- Data normalization and cleaning  
+- Quick analysis and reporting of results  
+- Easily extensible for custom sources or analysis logic  
+
+---
+
+## Prerequisites
+
+- Python 3.12 or higher  
+- pip (Python package manager)  
+- Internet connection (for external data sources)  
+
+---
+
+## Installation
+
+### Clone the repository
+
+```bash
 git clone https://github.com/shahpari2kht/DataScoutBot.git
 cd DataScoutBot
-
-# نصب وابستگی‌ها
+Install dependencies
 pip install -r requirements.txt
 
-# اجرا (مثال اولیه)
-python main.py
-```
+Usage
+Run directly from command line
+python main.py --source sample_data.csv --analyze summary
 
-## مثال استفاده یا اجرای نمونه
-
-```python
+Run from Python module
 from datascout import DataScoutBot
 
 bot = DataScoutBot(source="sample_data.csv")
 result = bot.collect_and_analyze()
 print(result)
-```
 
-یا اجرای مستقیم:
-```sh
-python main.py --source sample_data.csv --analyze summary
-```
-
-## ساختار پوشه‌ها
-
-```
+Project Structure
 DataScoutBot/
 │
-├── main.py               # نقطه‌ی ورود اصلی برنامه
-├── datascout/            # ماژول‌های اصلی پردازش داده و منطق ربات
+├── main.py               # Main entry point
+├── datascout/            # Core modules for data collection and analysis
 │   ├── __init__.py
-│   ├── collector.py      # کلاس‌ها و توابع جمع‌آوری داده
-│   └── analyzer.py       # پیاده‌سازی منطق تحلیل داده‌ها
-├── tests/                # تست‌های خودکار برای واحدهای مختلف
-├── requirements.txt      # وابستگی‌های پایتون
-├── .github/
+│   ├── collector.py      # Classes and functions for data collection
+│   └── analyzer.py       # Analysis logic and reporting
+├── tests/                # Unit and integration tests
+├── requirements.txt      # Python dependencies
+├── .github/              # GitHub templates and contribution guidelines
 │   ├── ISSUE_TEMPLATE.md
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── CONTRIBUTING.md
+├── .env.example          # Example environment file
+├── build_datascoutbot.py # Project build and setup script
 └── README.md
-```
 
-- **main.py:** اسکریپت اولیه برای اجرای ربات
-- **datascout/**: منطق و ماژول ربات
-- **tests/**: تست‌های واحد و یکپارچه
-- **.github/**: استانداردهای مشارکت و همکاری
-- **requirements.txt:** لیست وابستگی‌ها
+Testing
 
-## تست
+Run automated tests using pytest:
 
-برای اجرای تست‌ها از pytest استفاده کنید:
-```sh
 pip install pytest
 pytest tests/
-```
 
-## مشارکت
+Contributing
 
-جهت مشارکت:
-- ابتدا مخزن را Fork و Clone کنید.
-- یک Branch جدید بسازید.
-- پس از اعمال و تست تغییرات، Pull Request ثبت نمایید.
-- تمام تغییرات باید با تست و مستندسازی همراه باشند.
-- راهنمای مشارکت را در فایل `.github/CONTRIBUTING.md` مطالعه فرمایید.
+Fork and clone the repository
 
-## لایسنس
+Create a new branch
 
-این پروژه تحت مجوز MIT منتشر شده است. متن کامل مجوز در فایل LICENSE موجود است.
+Make changes and test them
 
-## پیشنهاد Badgeهای استاندارد
+Submit a pull request
 
-در ابتدای فایل README اضافه کنید:
-```markdown
-![Build Status](https://img.shields.io/github/actions/workflow/status/shahpari2kht/DataScoutBot/python-app.yml?branch=main)
-![Version](https://img.shields.io/github/v/release/shahpari2kht/DataScoutBot)
-![License](https://img.shields.io/github/license/shahpari2kht/DataScoutBot)
-![CodeCoverage](https://img.shields.io/codecov/c/github/shahpari2kht/DataScoutBot)
-```
+All contributions must include proper tests and documentation.
+See .github/CONTRIBUTING.md for full guidelines.
+
+License
+
+This project is licensed under the MIT License. See LICENSE for full details.
+
+خلاصه فارسی
+
+DataScoutBot یک ربات هوشمند پایتون است که داده‌ها را از منابع مختلف جمع‌آوری، پردازش و تحلیل می‌کند. مناسب پروژه‌های داده‌کاوی، یادگیری ماشین و اتوماسیون تحلیل داده است.
