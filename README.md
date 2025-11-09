@@ -1,132 +1,117 @@
-# DataScoutBot
+# 🤖 DataScoutBot / ربات داده‌کاو
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/shahpari2kht/DataScoutBot/python-app.yml?branch=main)
-![Version](https://img.shields.io/github/v/release/shahpari2kht/DataScoutBot)
-![License](https://img.shields.io/github/license/shahpari2kht/DataScoutBot)
-![Code Coverage](https://img.shields.io/codecov/c/github/shahpari2kht/DataScoutBot)
+**DataScoutBot** – A Python-based intelligent bot for collecting, processing, and analyzing data from multiple sources.  
+یک ربات هوشمند پایتون برای جمع‌آوری، پردازش و تحلیل داده‌ها از منابع مختلف.
 
 ---
 
-## Project Overview
-
-**DataScoutBot** is a Python based intelligent bot for collecting, processing, and analyzing data from multiple sources. It automates data extraction, monitors incoming data, and provides structured analysis results.  
-
-Ideal for data pipelines, machine learning projects, and automation workflows that require quick insights from raw data.
-
----
-
-## Features
+## 🧩 Features / ویژگی‌ها
 
 - Automatic data collection from files, APIs, or web sources  
+  جمع‌آوری خودکار داده‌ها از فایل‌ها، APIها یا منابع وب
 - Data cleaning and normalization  
-- Real time monitoring and logging  
+  پاک‌سازی و نرمال‌سازی داده‌ها
+- Real-time monitoring and logging  
+  مانیتورینگ و ثبت رخدادها در زمان واقعی
 - Quick analysis and summary reporting  
+  تحلیل سریع و گزارش خلاصه
 - Streamlit web demo for interactive visualization  
-- Fully extensible for custom sources and analysis modules  
+  دمو وب با Streamlit برای بصری‌سازی تعاملی
+- Fully extensible for custom sources and modules  
+  قابل توسعه برای منابع و ماژول‌های سفارشی
 
 ---
 
-## Prerequisites
+## 📁 Project Structure / ساختار پروژه
 
-- Python 3.12 or higher  
-- pip (Python package manager)  
-- Internet connection (for external data sources)  
-- Optional: virtual environment (recommended)  
+DataScoutBot/
+├── main.py # Main entry point / نقطه ورود اصلی
+├── datascout/ # Core modules for data collection & analysis / ماژول‌های اصلی
+│ ├── init.py
+│ ├── collector.py # Data collection classes/functions / جمع‌آوری داده
+│ └── analyzer.py # Analysis logic / تحلیل و گزارش
+├── web_demo/ # Streamlit interactive demo / دمو تعاملی
+│ └── app.py
+├── tests/ # Unit and integration tests / تست‌ها
+├── requirements.txt # Python dependencies / پیش‌نیازهای پایتون
+├── .github/ # GitHub templates & contribution guidelines / قالب‌ها و راهنما
+├── .env.example # Sample environment file / فایل نمونه محیط
+├── build_datascoutbot.py # Setup/build script / اسکریپت نصب و ساخت
+└── README.md
+
 
 ---
 
-## Installation
+## 🚀 Installation & Running / نصب و اجرا
 
-### Clone the repository
-
+**Step 1 / مرحله ۱: Clone & virtual environment / کلون و محیط مجازی**
 ```bash
 git clone https://github.com/shahpari2kht/DataScoutBot.git
 cd DataScoutBot
-Setup virtual environment (recommended)
 
-Linux / macOS
-
+# Linux / macOS
 python3 -m venv venv
 source venv/bin/activate
 
-
-Windows (PowerShell)
-
+# Windows (PowerShell)
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 
-Install dependencies
+
+Step 2 / مرحله ۲: Install dependencies / نصب پیش‌نیازها
+
 pip install -r requirements.txt
 
-Setup environment variables
 
-Copy the example .env file:
+Step 3 / مرحله ۳: Configure environment / تنظیم متغیرها
 
 cp .env.example .env  # Linux/macOS
-copy .env.example .env  # Windows
+copy .env.example .env # Windows
 
 
-Edit .env to set API keys, file paths, or other configuration.
+سپس .env را با کلیدهای API و مسیرها و تنظیمات خود ویرایش کنید.
 
-Usage
-Run from command line (CLI)
+Step 4 / مرحله ۴: Run the bot / اجرای ربات
+
+# Command line
 python main.py --source sample_data.csv --analyze summary
 
-Run from Python module
+# Python module
 from datascout import DataScoutBot
-
 bot = DataScoutBot(source="sample_data.csv")
 result = bot.collect_and_analyze()
 print(result)
 
-Streamlit Web Demo
+# Streamlit Web Demo
 streamlit run web_demo/app.py
 
 
-Open http://localhost:8501 in your browser to interact with the bot via web interface.
+باز کردن مرورگر: http://localhost:8501
 
-Project Structure
-DataScoutBot/
-│
-├── main.py               # Main entry point
-├── datascout/            # Core modules for data collection and analysis
-│   ├── __init__.py
-│   ├── collector.py      # Classes and functions for data collection
-│   └── analyzer.py       # Analysis logic and reporting
-├── web_demo/             # Streamlit interactive demo
-│   └── app.py
-├── tests/                # Unit and integration tests
-├── requirements.txt      # Python dependencies
-├── .github/              # GitHub templates and contribution guidelines
-├── .env.example          # Example environment file
-├── build_datascoutbot.py # Setup/build script
-└── README.md
+🧠 Key Learnings / نکات کلیدی
 
-Testing
+End-to-end data pipeline automation / مسیر کامل اتوماسیون داده‌ها
 
-Install pytest:
+Integration with multiple data sources / اتصال به منابع مختلف داده
 
-pip install pytest
-pytest tests/
+Real-time monitoring & logging / مانیتورینگ و ثبت رخداد در زمان واقعی
 
-Contributing
+Data cleaning, normalization & quick analysis / پاک‌سازی، نرمال‌سازی و تحلیل سریع
 
-Fork and clone the repository
+Interactive dashboards with Streamlit / داشبورد تعاملی با Streamlit
 
-Create a new branch
+👩‍💻 Author / نویسنده
 
-Implement your changes with tests
+Parisa Mohammadzadeh – Data Scientist & Developer / دانشمند داده و توسعه‌دهنده
+📍 Iran / ایران
+📧 shahpari2kht@gmail.com
 
-Submit a pull request
+🔗 GitHub Profile
 
-All contributions must include tests and proper documentation.
-See .github/CONTRIBUTING.md for full guidelines.
+🔒 Security Notes / نکات امنیتی
 
-License
+Do not commit private keys or sensitive data / توکن‌ها و داده‌های حساس هرگز اضافه نشوند
 
-This project is licensed under the MIT License. See LICENSE for details.
+.env.example contains only placeholder values / فایل نمونه فقط مقادیر نمایشی دارد
 
-Quick Summary (فارسی)
-
-DataScoutBot یک ربات پایتون است که داده‌ها را از منابع مختلف جمع‌آوری و تحلیل می‌کند.
-دارای دمو وب، اجرای مستقیم و API است و مناسب پروژه‌های داده‌کاوی، یادگیری ماشین و اتوماسیون داده است.
+All critical configurations are stored privately / تنظیمات مهم به صورت خصوصی نگهداری می‌شوند
